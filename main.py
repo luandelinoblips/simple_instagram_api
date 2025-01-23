@@ -16,4 +16,4 @@ api = Api(app)
 api.register_blueprint(users_blp)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
