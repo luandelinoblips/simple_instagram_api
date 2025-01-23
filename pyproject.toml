@@ -1,5 +1,5 @@
 [project]
-name = "simple-instagram-api"
+name = "simple-api"
 version = "0.1.0"
 description = ""
 authors = [
@@ -8,10 +8,11 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
+    "flask (>=3.1.0,<4.0.0)",
     "flask-smorest (>=0.45.0,<0.46.0)",
-    "requests (>=2.32.3,<3.0.0)",
-    "gunicorn (>=23.0.0,<24.0.0)"
+    "requests (>=2.32.3,<3.0.0)"
 ]
+
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
