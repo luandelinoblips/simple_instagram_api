@@ -2,27 +2,17 @@ import requests
 import re
 import unicodedata
 
-proxies = {
-    'http': None,
-    'https': None,
-}
-
 
 def fetch_user_data(username: str) -> dict:
     URL_BASE = 'https://www.instagram.com/api/v1/users/web_profile_info'
     headers = {
         'User-Agent': (
-            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
-        ),
-        'Accept-Language': 'en-US,en;q=0.9',
-        'Accept-Encoding': 'gzip, deflate',
+            'Mozillpair_0904ee679049452db29a988acdbffecaa/5.0 (iPhone; CPU iPhone OS 12_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 105.0.0.11.118 (iPhone11,8; iOS 12_3_1; en_US; en-US; scale=2.00; 828x1792; 165586599)'
+        )
     }
     try:
         response = requests.get(
-            URL_BASE,
-            params={'username': username},
-            headers=headers,
-            proxies=proxies,
+            URL_BASE, params={'username': username}, headers=headers
         )
         response.raise_for_status()
         return response.json().get('data', {}).get('user', {})
