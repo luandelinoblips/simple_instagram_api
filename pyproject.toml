@@ -1,0 +1,21 @@
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+docstring-code-format = true
+
+[project]
+name = "simple-instagram-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi[standard]>=0.115.7",
+    "pip>=24.3.1",
+    "pre-commit-uv>=4.1.4",
+    "requests>=2.32.3",
+    "ruff>=0.9.3",
+]
